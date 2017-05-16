@@ -6,9 +6,7 @@ export default class CallbackPage extends Component {
         const params = new URLSearchParams(this.props.location.search);
         const code = params.get('code');
         axios.post(`http://localhost:8000/api/oauth`, {
-            params: {
-                code,
-            }
+            code,
         })
     }
 
